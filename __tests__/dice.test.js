@@ -21,9 +21,11 @@ describe('Player', () => {
   })
 
   test('should add a score to the players current score total', () => {
-    const playerScore = new Player();
-    playerScore.rollDice();
-    expect(playerScore.roll).toBeGreaterThan(2);
+    const playerScore = new Player("player1");
+    playerScore.playerTurn();
+    expect(playerScore.roundScore).toBeLessThanOrEqual(6);
+    expect(playerScore.roundScore).toBeGreaterThan(0);
+    expect(playerScore.roundScore).toEqual(playerScore.roll);
   })
 
   test('should correctly return a random number from 1-6 for the player', () => {
@@ -34,7 +36,12 @@ describe('Player', () => {
 
   test('should return True if player score is greater than or equal to 100', () => {
     const playerRoll = new Player("player1");
-    playerRoll.checkWin();
-    expect(playerRoll.checkWin).toBeTruthy();
+    const playerRollLost = new Player("player2");
+    playerRoll.totalScore = 99;
+    playerRoll.roundScore = 1
+    playerRollLost.totalScore = 90;
+    playerRollLost.roundScore = 0;
+    expect(playerRoll.checkWin()).toBeTruthy();
+    expect(playerRollLost.checkWin()).toBeFalsy();
   })
 });
