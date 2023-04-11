@@ -13,10 +13,10 @@ describe('Game', () => {
 describe('Player', () => {
 
   test('should create a new player with initialized scores', () => {
-    const player = new Player();
-    expect(player.playerName).toEqual([]);
-    // expect(player.totalScore).toEqual(0);
-    // expect(player.roundScore).toEqual(0);
-    // expect(player.roll).toEqual(0);
+    const player = new Player("Joe");
+    expect(player.playerName).toEqual("Joe");
+    expect(player.totalScore).toEqual(0);
+    expect(player.roundScore).toEqual(0);
+    expect(player.roll).toEqual(0);
   })
 });
