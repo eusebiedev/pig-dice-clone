@@ -5,11 +5,7 @@
 body {
   padding-left: 75px;
   padding-top: 75px; 
-  background-image: url("dice.jpeg");
   background-position: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .btn {
