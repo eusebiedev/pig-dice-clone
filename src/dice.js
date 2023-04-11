@@ -35,12 +35,12 @@ export function Game(){
 // };
 
 // //Business Logic for Players
-// export function Player(playerName) {
-//   this.playerName = playerName;
-//   this.totalScore = 0;  
-//   this.roundScore = 0;
-//   this.roll = 0;
-// }
+export function Player(playerName) {
+  this.playerName = playerName;
+  this.totalScore = 0;  
+  this.roundScore = 0;
+  this.roll = 0;
+}
 
 // //Business Logic for Player Turns
 
