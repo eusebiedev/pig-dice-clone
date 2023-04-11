@@ -42,20 +42,22 @@ export function Player(playerName) {
   this.roll = 0;
 }
 
-// //Business Logic for Player Turns
+//Business Logic for Player Turns
 
-// Player.prototype.playerTurn = function() {
-//   this.rollDice();
-//   this.roundScore += this.roll;
-// };
+Player.prototype.playerTurn = function() {
+  this.rollDice();
+  this.roundScore += this.roll;
+};
 
 Player.prototype.rollDice = function() {
   this.roll = Math.ceil(Math.random()*6); 
 };
 
 Player.prototype.checkWin = function(){
-  if(this.roundScore + this.totalScore >= 100){
-    alert("This player has won the game");
+  if(this.roundScore + this.totalScore >= 100) {
+    return true;
+  } else {
+    return false;
   }
 };
 
