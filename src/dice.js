@@ -49,15 +49,15 @@ export function Player(playerName) {
 //   this.roundScore += this.roll;
 // };
 
-// Player.prototype.rollDice = function() {
-//   this.roll = Math.ceil(Math.random()*6); 
-// };
+Player.prototype.rollDice = function() {
+  this.roll = Math.ceil(Math.random()*6); 
+};
 
-// Player.prototype.checkWin = function(){
-//   if(this.roundScore + this.totalScore >= 100){
-//     alert("This player has won the game");
-//   }
-// };
+Player.prototype.checkWin = function(){
+  if(this.roundScore + this.totalScore >= 100){
+    alert("This player has won the game");
+  }
+};
 
 // Player.prototype.holdDice = function(){
 //   this.totalScore += this.roundScore;
